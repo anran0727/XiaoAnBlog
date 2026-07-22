@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多列布局测试</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body { padding: 40px 20px; }
+        .test-section { margin-bottom: 60px; }
+        .test-section h2 { margin-bottom: 20px; color: #6f42c1; }
+    </style>
+</head>
+<body>
+    <h1>文章列表多列布局测试</h1>
+    
+    <div class="test-section">
+        <h2>2列布局</h2>
+        <div class="post-grid" data-columns="2">
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/1">这是一篇测试文章的标题</a></h3>
+                    <p class="post-card-excerpt">这是文章的摘要内容，用于展示文章的简要信息...</p>
+                    <div class="post-card-meta">
+                        <span>2024-01-15</span>
+                    </div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/life">生活</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/2">这是第二篇测试文章的标题</a></h3>
+                    <p class="post-card-excerpt">这是文章的摘要内容，用于展示文章的简要信息...</p>
+                    <div class="post-card-meta">
+                        <span>2024-01-14</span>
+                    </div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/3">这是第三篇测试文章的标题</a></h3>
+                    <p class="post-card-excerpt">这是文章的摘要内容，用于展示文章的简要信息...</p>
+                    <div class="post-card-meta">
+                        <span>2024-01-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/books">阅读</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/4">这是第四篇测试文章的标题</a></h3>
+                    <p class="post-card-excerpt">这是文章的摘要内容，用于展示文章的简要信息...</p>
+                    <div class="post-card-meta">
+                        <span>2024-01-12</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>3列布局</h2>
+        <div class="post-grid" data-columns="3">
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/1">文章标题1</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-15</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/life">生活</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/2">文章标题2</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-14</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/3">文章标题3</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-13</span></div>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>4列布局</h2>
+        <div class="post-grid" data-columns="4">
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/1">文章标题1</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-15</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/life">生活</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/2">文章标题2</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-14</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/3">文章标题3</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-13</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/books">阅读</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/4">文章标题4</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-12</span></div>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>5列布局</h2>
+        <div class="post-grid" data-columns="5">
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/1">文章标题1</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-15</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/life">生活</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/2">文章标题2</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-14</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/tech">技术</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/3">文章标题3</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-13</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/books">阅读</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/4">文章标题4</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-12</span></div>
+                </div>
+            </article>
+            <article class="post-card">
+                <div class="post-card-cover">
+                    <a href="/posts/5">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect fill='%23f0f0f0' width='300' height='200'/%3E%3Ctext fill='%23999' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E文章封面%3C/text%3E%3C/svg%3E" alt="文章标题">
+                    </a>
+                    <div class="post-card-category">
+                        <a href="/category/mysql">数据库</a>
+                    </div>
+                </div>
+                <div class="post-card-content">
+                    <h3 class="post-card-title"><a href="/posts/5">文章标题5</a></h3>
+                    <p class="post-card-excerpt">文章摘要...</p>
+                    <div class="post-card-meta"><span>2024-01-11</span></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

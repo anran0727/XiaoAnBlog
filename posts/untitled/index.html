@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liunx功能安装 - 小安博客</title>
+    <meta name="description" content="Array
+|序号|时间|更改者|内容|
+|------------|------------|------------|------------|
+|1|2023-09-30|癫狂小安|首次上传FTP、防火墙操作命令|
+|2|2023-10-27|癫狂小安|TAR解压命令总结，修改FTP服务内容|">
+    <link rel="stylesheet" href="/style.css">
+    <style>:root {
+        --bg-color: #ebeaea;
+        --accent-color: #ffffff;
+        --progress-color: #ffffff;
+        --front-bg-color: #ebeaea;
+        --front-accent-color: #ffffff;
+    }
+        body {
+            background-color: #ebeaea !important;
+        }
+        #page-header {
+            background-color: #3e3f51 !important;
+        }
+        .site-name,
+        .menus_items .site-page,
+        #toggle-menu a {
+            color: #ffffff !important;
+        }</style>
+</head>
+<body>
+    
+    <div class="progress-bar"></div>
+    
+    <header id="page-header" class="">
+        <nav id="nav">
+            <span id="blog-info">
+                <a href="/" title="小安博客">
+                    
+                    <span class="site-name">小安博客</span>
+                </a>
+            </span>
+            <div id="menus">
+                <div class="menus_items">
+                    <a href="/" class="site-page ">首页</a><a href="/categories/index.html" class="site-page ">分类</a><a href="/tags/index.html" class="site-page ">标签</a><a href="/archives/index.html" class="site-page ">归档</a><a href="/about/index.html" class="site-page ">关于</a>
+                </div>
+                <div id="toggle-menu">
+                    <a href="javascript:void(0);">☰</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <nav class="breadcrumb"><a href="/">首页</a><span>/</span><a href="/category/tech">技术文章</a><span>/</span>liunx功能安装</nav>
+    
+    <main class="page-content">
+        <div class="layout">
+            <div class="main-content">
+                <article>
+                    <header class="post-header">
+                        <h1>liunx功能安装</h1>
+                        <div class="meta">
+                            <span>2026-07-16 14:04:23</span>
+                            <span>·</span>
+                            <span><a href="/category/tech">技术文章</a></span>
+                            <span>·</span>
+                            <span class="author">
+                                
+                                <span></span>
+                            </span>
+                        </div>
+                    </header>
+                    
+                    <div class="post-content">Array<br />
+|序号|时间|更改者|内容|<br />
+|------------|------------|------------|------------|<br />
+|1|2023-09-30|癫狂小安|首次上传FTP、防火墙操作命令|<br />
+|2|2023-10-27|癫狂小安|TAR解压命令总结，修改FTP服务内容|<br />
+Array<br />
+**安装 vsftpd。**<br />
+Array<br />
+yum install -y vsftpd<br />
+Array<br />
+**设置 vsftpd 开机自启动**<br />
+Array<br />
+systemctl enable vsftpd<br />
+Array<br />
+**启动 FTP 服务**<br />
+Array<br />
+Array<br />
+systemctl start vsftpd.service<br />
+Array<br />
+systemctl restart vsftpd.service<br />
+Array<br />
+netstat -antup | grep ftp<br />
+Array<br />
+systemctl status vsftpd.service<br />
+Array<br />
+**配置 vsftpd**<br />
+Array<br />
+Array<br />
+Array<br />
+Array<br />
+Array<br />
+Array<br />
+**主动模式，防火墙开启20、21端口**<br />
+Array<br />
+Array<br />
+firewall-cmd --zone=public --add-service=ftp --permanent<br />
+Array<br />
+firewall-cmd --zone=public --add-port=21/tcp --permanent <br />
+firewall-cmd --zone=public --add-port=20/tcp --permanent<br />
+Array<br />
+**关闭防火墙**<br />
+Array<br />
+#关闭防火墙<br />
+systemctl disable firewalld<br />
+#开启防火墙<br />
+systemctl start firewalld.service<br />
+Array<br />
+------------<br />
+Array<br />
+Array<br />
+Array<br />
+systemctl status firewalld<br />
+service  iptables status<br />
+Array<br />
+Array<br />
+Array<br />
+systemctl stop firewalld<br />
+service  iptables stop<br />
+Array<br />
+Array<br />
+Array<br />
+systemctl disable firewalld<br />
+chkconfig iptables off<br />
+Array<br />
+Array<br />
+Array<br />
+systemctl enable firewalld<br />
+service iptables restart  <br />
+Array<br />
+Array<br />
+Array<br />
+chkconfig iptables on<br />
+Array<br />
+------------<br />
+Array<br />
+Array<br />
+>tar –cvf jpg.tar *.jpg  将目录里所有jpg文件打包成tar.jpg<br />
+tar –czf jpg.tar.gz *.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz<br />
+tar –cjf jpg.tar.bz2 *.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2<br />
+tar –cZf jpg.tar.Z *.jpg   将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z<br />
+rar a jpg.rar *.jpg rar格式的压缩，需要先下载rar for linux<br />
+zip jpg.zip *.jpg   zip格式的压缩，需要先下载zip for linux<br />
+Array<br />
+>tar –xvf file.tar  解压 tar包<br />
+tar -xzvf file.tar.gz 解压tar.gz<br />
+tar -xjvf file.tar.bz2   解压 tar.bz2<br />
+tar –xZvf file.tar.Z   解压tar.Z<br />
+unrar e file.rar 解压rar<br />
+unzip file.zip 解压zip<br />
+Array<br />
+> *.tar 用 tar –xvf 解压<br />
+*.gz 用 gzip -d或者gunzip 解压<br />
+*.tar *.gz和 *.tgz 用 tar –xzf 解压<br />
+*.bz2 用 bzip2 -d或者用bunzip2 解压<br />
+*.tar.bz2用tar –xjf 解压<br />
+*.Z 用 uncompress 解压<br />
+*.tar.Z 用tar –xZf 解压<br />
+*.rar 用 unrar e解压<br />
+*.zip 用 unzip 解压<br />
+------------<br />
+Array<br />
+</div>
+                    
+                    <footer class="post-footer">
+                        <div class="post-tags"><a href="/tag/web-dev">Web开发</a></div>
+                        <nav class="post-nav">
+                            <span><a href="/posts/12">← 12</a></span>
+                            <span><span style="color: var(--text-muted);">没有下一篇</span></span>
+                        </nav>
+                    </footer>
+                </article>
+            </div>
+            <aside id="aside-content">
+                <div class="card toc-panel">
+                    <div class="card-title">📋 文章目录</div>
+                    <ul class="toc-list"></ul>
+                </div>
+                
+    <div class="card card-categories">
+        <div class="card-title">📁 文章分类</div>
+        <ul><li><a href="/category/tech">技术文章<span class="category-count">1</span></a></li><li><a href="/category/life">生活随笔<span class="category-count">3</span></a></li><li><a href="/category/books">读书推荐<span class="category-count">0</span></a></li></ul>
+    </div>
+    
+                
+    <div class="card card-tags">
+        <div class="card-title">🏷️ 标签云</div>
+        <div class="tag-cloud"><a href="/tag/web-dev">Web开发</a><a href="/tag/life">生活</a></div>
+    </div>
+    
+            </aside>
+        </div>
+    </main>
+    
+    
+    <footer id="footer">
+        <div id="footer-wrap">
+            <div id="ft">
+                <div class="ft-item-1">
+                    <div class="t-top">
+                        <div class="t-t-l">
+                            <p class="ft-t">关于站点</p>
+                            <div class="bg-ad">一个简洁的个人博客</div>
+                        </div>
+                        <div class="t-t-r">
+                            <p class="ft-t">站点导航</p>
+                            <ul class="ft-links">
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/categories/index.html">分类</a></li>
+                                <li><a href="/tags/index.html">标签</a></li>
+                                <li><a href="/archives/index.html">归档</a></li>
+                                <li><a href="/about/index.html">关于</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-item-2">
+                    <p class="ft-t">友情链接</p>
+                    <div class="ft-img-group">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 小安博客</p>
+                <p>Powered by <a href="#">小安博客</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="回到顶部">↑</button>
+    
+    
+    <script src="/script.js"></script>
+</body>
+</html>
